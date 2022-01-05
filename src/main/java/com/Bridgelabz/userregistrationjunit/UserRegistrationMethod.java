@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 public class UserRegistrationMethod {
 	private static final String FIRST_NAME_REGEX= "^[A-Z][a-z A-Z]{2,}";
     private static final String LAST_NAME_REGEX= "^[A-Z][a-z A-Z]{2,}";
-    private static final String EMAIL_REGEX= "^[abc]+[.xyz]{0,4}+@[+bl.co.]+[a-z]{0,3}";
+    private static final String EMAIL_REGEX= "^[abc0-9+\\\\.-]+@[a-z]+[\\\\.][a-z]{2,3}$";
     private static final String PASSWORD_REGEX= "(?=.*[A-Z])(?=.*[0-9])(?=.*[@$!%*#?&])[a-zA-Z0-9@$!%*#?&]{8,}$";
 	public boolean verificationFirstName(String dataToBeValidated)
     {

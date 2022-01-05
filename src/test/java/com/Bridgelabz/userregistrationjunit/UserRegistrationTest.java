@@ -43,7 +43,7 @@ public class UserRegistrationTest {
 		public void givenEmail_WhenProper_ShouldReturnTrue()
 	    {
 	        UserRegistrationMethod userRegistrationMethod = new UserRegistrationMethod();
-	        boolean isValid = userRegistrationMethod.verificationEmail("abc.xyz@bl.co.in");
+	        boolean isValid = userRegistrationMethod.verificationEmail("abc-100@gmail.com");
 	        Assert.assertTrue(isValid);
 	    } 
 		
@@ -51,7 +51,7 @@ public class UserRegistrationTest {
 		public void givenEmail_WhenProper_ShouldReturnFalse()
 	    {
 	        UserRegistrationMethod userRegistrationMethod = new UserRegistrationMethod();
-	        boolean isValid = userRegistrationMethod.verificationEmail("abc@com.com");
+	        boolean isValid = userRegistrationMethod.verificationEmail("abc@.com.com");
 	        Assert.assertFalse(isValid);
 	    } 
 		
