@@ -7,7 +7,7 @@ public class UserRegistrationMethod {
 	private static final String FIRST_NAME_REGEX= "^[A-Z][a-z A-Z]{2,}";
     private static final String LAST_NAME_REGEX= "^[A-Z][a-z A-Z]{2,}";
     private static final String EMAIL_REGEX= "^[abc]+[.xyz]{0,4}+@[+bl.co.]+[a-z]{0,3}";
-    
+    private static final String PASSWORD_REGEX= "^[0-9 a-z A_Z]{8,}";
 	public boolean verificationFirstName(String dataToBeValidated)
     {
         Pattern pattern = Pattern.compile(FIRST_NAME_REGEX);
@@ -53,19 +53,34 @@ public class UserRegistrationMethod {
 	        }
 	    }
 	 
-	 public boolean verificationForNumber(UserRegistrationDetails userRegistrationDetails){
-	        if(userRegistrationDetails.getNumber().length()<13) {
+	 public boolean verificationForNumber(String dataToBeVerified){
+	        if(dataToBeVerified.length()<13) {
 	            System.err.println("Invalid Number");
 	            return false;
 	        }
 	        else {
 	            Pattern pattern = Pattern.compile("^[0-9]{1,}[\\s0-9]{0,10}");
-	            Matcher matcher = pattern.matcher(userRegistrationDetails.getNumber());
+	            Matcher matcher = pattern.matcher(dataToBeVerified);
 	            boolean invalid = matcher.matches();
 	            System.out.println(invalid);
 	            return invalid;
 	        }
 
+	    }
+	 
+	 public boolean passwordVerification(String dataToBeVerified)
+	    {
+	        Pattern pattern = Pattern.compile(PASSWORD_REGEX);
+	        Matcher matcher = pattern.matcher(dataToBeVerified);
+	        boolean invalid = matcher.matches();
+	        if(invalid==false)
+	        {
+	            System.err.println("Invalid Password");
+	            return false;
+	        }
+	        else {
+	            return true;
+	        }
 	    }
 	 
 	public void finalArgument(boolean firstName,boolean lastName,boolean email,UserRegistrationDetails userRegistrationDetails)

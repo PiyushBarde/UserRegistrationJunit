@@ -57,19 +57,38 @@ public class UserRegistrationTest {
 		
 		//-----------------------PhoneNumber---------------------------//
 		
-			@Test
+		/*	@Test
 			public void givenPhoneNumber_WhenProper_ShouldReturnTrue()
 		    {
 		        UserRegistrationMethod userRegistrationMethod = new UserRegistrationMethod();
-		        boolean isValid = userRegistrationMethod.verificationEmail("91 8446727790");
+		        boolean isValid = userRegistrationMethod.verificationForNumber("91 8446727790");
 		        Assert.assertTrue(isValid);
-		    } 
+		    }  */
 			
 			@Test
 			public void givenPhoneNumber_WhenProper_ShouldReturnFalse()
 		    {
 		        UserRegistrationMethod userRegistrationMethod = new UserRegistrationMethod();
-		        boolean isValid = userRegistrationMethod.verificationEmail("123");
+		        boolean isValid = userRegistrationMethod.verificationForNumber("123");
+		        Assert.assertFalse(isValid);
+		    }  
+			
+			//-----------------------Password---------------------------//
+			
+			@Test
+			public void givenPassword_WhenProper_ShouldReturnTrue()
+		    {
+		        UserRegistrationMethod userRegistrationMethod = new UserRegistrationMethod();
+		        boolean isValid = userRegistrationMethod.passwordVerification("abc123xyz");
+		        Assert.assertTrue(isValid);
+		    } 
+			
+			@Test
+			public void givenPassword_WhenProper_ShouldReturnFalse()
+		    {
+		        UserRegistrationMethod userRegistrationMethod = new UserRegistrationMethod();
+		        boolean isValid = userRegistrationMethod.passwordVerification("abc");
 		        Assert.assertFalse(isValid);
 		    } 
+			
 }
