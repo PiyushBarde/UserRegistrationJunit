@@ -33,7 +33,8 @@ public class UserRegistrationMethod {
             System.err.println("Invalid last Name");
             return false;
         }
-        else {
+        else 
+        {
             return true;
         }
     }
@@ -48,7 +49,8 @@ public class UserRegistrationMethod {
 	            System.err.println("Invalid Email");
 	            return false;
 	        }
-	        else {
+	        else
+	        {
 	            return true;
 	        }
 	    }
@@ -58,7 +60,8 @@ public class UserRegistrationMethod {
 	            System.err.println("Invalid Number");
 	            return false;
 	        }
-	        else {
+	        else 
+	        {
 	            Pattern pattern = Pattern.compile("^[0-9]{1,}[\\s0-9]{0,10}");
 	            Matcher matcher = pattern.matcher(dataToBeVerified);
 	            boolean invalid = matcher.matches();
@@ -78,7 +81,8 @@ public class UserRegistrationMethod {
 	            System.err.println("Invalid Password");
 	            return false;
 	        }
-	        else {
+	        else 
+	        {
 	            return true;
 	        }
 	    }

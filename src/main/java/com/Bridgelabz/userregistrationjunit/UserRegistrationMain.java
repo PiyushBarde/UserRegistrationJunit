@@ -17,15 +17,20 @@ public class UserRegistrationMain {
     System.out.println("Create password = ");
     String passWord = sc.next();
     
+    //------------------------details uploaded-----------------//
+    
     UserRegistrationDetails userRegistrationDetails = new UserRegistrationDetails();
+    
     userRegistrationDetails.setFirstName(nameFirst);
     userRegistrationDetails.setLastName(nameLast);
     userRegistrationDetails.setEmail(emailAddress);
     userRegistrationDetails.setNumber(phoneNumber);
     userRegistrationDetails.setPassword(passWord);
 
+    //-----------------------methods called--------------------//
     
     UserRegistrationMethod userRegistrationMethod = new UserRegistrationMethod();
+    
     userRegistrationMethod.finalArgument(userRegistrationMethod.verificationFirstName(userRegistrationDetails.getFirstName()),
             userRegistrationMethod.verificationLastName(userRegistrationDetails.getLastName()),
             userRegistrationMethod.verificationEmail(userRegistrationDetails.getEmail()),

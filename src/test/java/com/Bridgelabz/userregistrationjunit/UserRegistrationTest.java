@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class UserRegistrationTest {
+	
 	@Test
 	public void givenFirstName_WhenProper_ShouldReturnTrue()
     {
@@ -40,8 +41,7 @@ public class UserRegistrationTest {
 	//-----------------------Email---------------------------//
 	
 		@Test
-		public void givenEmail_WhenProper_ShouldReturnTrue()
-	    {
+		public void givenEmail_WhenProper_ShouldReturnTrue(){
 	        UserRegistrationMethod userRegistrationMethod = new UserRegistrationMethod();
 	        boolean isValid = userRegistrationMethod.verificationEmail("abc-100@gmail.com");
 	        Assert.assertTrue(isValid);
