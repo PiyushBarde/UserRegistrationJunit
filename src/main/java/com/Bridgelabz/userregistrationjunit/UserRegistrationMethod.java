@@ -53,6 +53,21 @@ public class UserRegistrationMethod {
 	        }
 	    }
 	 
+	 public boolean verificationForNumber(UserRegistrationDetails userRegistrationDetails){
+	        if(userRegistrationDetails.getNumber().length()<13) {
+	            System.err.println("Invalid Number");
+	            return false;
+	        }
+	        else {
+	            Pattern pattern = Pattern.compile("^[0-9]{1,}[\\s0-9]{0,10}");
+	            Matcher matcher = pattern.matcher(userRegistrationDetails.getNumber());
+	            boolean invalid = matcher.matches();
+	            System.out.println(invalid);
+	            return invalid;
+	        }
+
+	    }
+	 
 	public void finalArgument(boolean firstName,boolean lastName,boolean email,UserRegistrationDetails userRegistrationDetails)
     {
         if(firstName==true && lastName==true && email==true)
