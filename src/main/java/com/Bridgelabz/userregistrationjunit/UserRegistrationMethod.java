@@ -7,7 +7,7 @@ public class UserRegistrationMethod {
 	private static final String FIRST_NAME_REGEX= "^[A-Z][a-z A-Z]{2,}";
     private static final String LAST_NAME_REGEX= "^[A-Z][a-z A-Z]{2,}";
     private static final String EMAIL_REGEX= "^[abc]+[.xyz]{0,4}+@[+bl.co.]+[a-z]{0,3}";
-    private static final String PASSWORD_REGEX= "^[0-9 a-z A_Z]{8,}";
+    private static final String PASSWORD_REGEX= "(?=.*[A-Z])[a-zA-Z0-9]{8,}$";
 	public boolean verificationFirstName(String dataToBeValidated)
     {
         Pattern pattern = Pattern.compile(FIRST_NAME_REGEX);

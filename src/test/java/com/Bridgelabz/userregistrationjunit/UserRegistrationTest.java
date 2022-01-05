@@ -79,7 +79,7 @@ public class UserRegistrationTest {
 			public void givenPassword_WhenProper_ShouldReturnTrue()
 		    {
 		        UserRegistrationMethod userRegistrationMethod = new UserRegistrationMethod();
-		        boolean isValid = userRegistrationMethod.passwordVerification("abc123xyz");
+		        boolean isValid = userRegistrationMethod.passwordVerification("abC123xyz");
 		        Assert.assertTrue(isValid);
 		    } 
 			
@@ -87,7 +87,7 @@ public class UserRegistrationTest {
 			public void givenPassword_WhenProper_ShouldReturnFalse()
 		    {
 		        UserRegistrationMethod userRegistrationMethod = new UserRegistrationMethod();
-		        boolean isValid = userRegistrationMethod.passwordVerification("abc");
+		        boolean isValid = userRegistrationMethod.passwordVerification("abcdeghij");
 		        Assert.assertFalse(isValid);
 		    } 
 			
