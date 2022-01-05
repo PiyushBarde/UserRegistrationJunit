@@ -87,7 +87,7 @@ public class UserRegistrationTest {
 			public void givenPassword_WhenProper_ShouldReturnFalse()
 		    {
 		        UserRegistrationMethod userRegistrationMethod = new UserRegistrationMethod();
-		        boolean isValid = userRegistrationMethod.passwordVerification("abcdeghij");
+		        boolean isValid = userRegistrationMethod.passwordVerification("abCDeghij");
 		        Assert.assertFalse(isValid);
 		    } 
 			
