@@ -43,7 +43,7 @@ public class UserRegistrationTest {
 		@Test
 		public void givenEmail_WhenProper_ShouldReturnTrue(){
 	        UserRegistrationMethod userRegistrationMethod = new UserRegistrationMethod();
-	        boolean isValid = userRegistrationMethod.verificationEmail("abc-100@gmail.com");
+	        boolean isValid = userRegistrationMethod.verificationEmail("abc.100@yahoo.com");
 	        Assert.assertTrue(isValid);
 	    } 
 		
