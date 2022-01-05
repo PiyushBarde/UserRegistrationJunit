@@ -10,15 +10,20 @@ public class UserRegistrationMain {
     String nameFirst = sc.next();
     System.out.println("Enter your last name = ");
     String nameLast = sc.next();
+    System.out.println("Enter your email = ");
+    String emailAddress = sc.next();
     
     UserRegistrationDetails userRegistrationDetails = new UserRegistrationDetails();
     userRegistrationDetails.setFirstName(nameFirst);
     userRegistrationDetails.setLastName(nameLast);
+    userRegistrationDetails.setEmail(emailAddress);
+
     
     UserRegistrationMethod userRegistrationMethod = new UserRegistrationMethod();
     userRegistrationMethod.finalArgument(userRegistrationMethod.verificationFirstName(userRegistrationDetails.getFirstName()),
-            userRegistrationMethod.verificationLastName(userRegistrationDetails.getLastName())
-            		,userRegistrationDetails);
+            userRegistrationMethod.verificationLastName(userRegistrationDetails.getLastName()),
+            userRegistrationMethod.verificationEmail(userRegistrationDetails.getEmail()),
+            userRegistrationDetails);
     
 	}
 }
