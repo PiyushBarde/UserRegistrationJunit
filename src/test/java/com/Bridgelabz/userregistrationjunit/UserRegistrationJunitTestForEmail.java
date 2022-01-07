@@ -42,7 +42,7 @@ public class UserRegistrationJunitTestForEmail {
 												{"abc@gmail.com.aa.au" , false} } );
 	}	
 		@Test
-		public void givenEmail_WhenValid_ShowReturnTrue() {
+		public void givenEmail_WhenValid_ShowReturnTrue() throws EmailException {
 			UserRegistrationMethod userRegistrationMethod = new UserRegistrationMethod();
 			boolean result = userRegistrationMethod.verificationEmail(this.email2Test);
 			Assert.assertEquals(this.expectedResult, result);

@@ -3,7 +3,7 @@ package com.Bridgelabz.userregistrationjunit;
 import java.util.Scanner;
 
 public class UserRegistrationMain {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FirstNameException, LastNameException, EmailException {
 	
 	Scanner sc = new Scanner(System.in);
     System.out.println("Enter your first name = ");
@@ -34,6 +34,7 @@ public class UserRegistrationMain {
     userRegistrationMethod.finalArgument(userRegistrationMethod.verificationFirstName(userRegistrationDetails.getFirstName()),
             userRegistrationMethod.verificationLastName(userRegistrationDetails.getLastName()),
             userRegistrationMethod.verificationEmail(userRegistrationDetails.getEmail()),
+            userRegistrationMethod.verificationEmail(userRegistrationDetails.getPassword()),
             userRegistrationDetails);
     
 	}
