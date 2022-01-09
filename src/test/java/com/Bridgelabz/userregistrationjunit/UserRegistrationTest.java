@@ -4,12 +4,12 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class UserRegistrationTest {
-	
+	UserRegistrationMethod register = new UserRegistrationMethod();
 	@Test
 	public void givenFirstName_WhenProper_ShouldReturnTrue() throws FirstNameException
     {
         UserRegistrationMethod userRegistrationMethod = new UserRegistrationMethod();
-        boolean isValid = userRegistrationMethod.verificationFirstName("Piyush");
+        boolean isValid = register.verifyFirstName.ValidationOfUser("Piyush");
         Assert.assertTrue(isValid);
     } 
 	
@@ -17,7 +17,7 @@ public class UserRegistrationTest {
 	public void givenFirstName_WhenProper_ShouldReturnFalse() throws FirstNameException
     {
         UserRegistrationMethod userRegistrationMethod = new UserRegistrationMethod();
-        boolean isValid = userRegistrationMethod.verificationFirstName("piyush");
+        boolean isValid = register.verifyFirstName.ValidationOfUser("piyush");
         Assert.assertFalse(isValid);
     }
 	
@@ -27,7 +27,7 @@ public class UserRegistrationTest {
 	public void givenLastName_WhenProper_ShouldReturnTrue() throws LastNameException
     {
         UserRegistrationMethod userRegistrationMethod = new UserRegistrationMethod();
-        boolean isValid = userRegistrationMethod.verificationLastName("Barde");
+        boolean isValid = register.verifyLastName.ValidationOfUser("Barde");
         Assert.assertTrue(isValid);
     } 
 	
@@ -35,7 +35,7 @@ public class UserRegistrationTest {
 	public void givenLastName_WhenProper_ShouldReturnFalse() throws LastNameException
     {
         UserRegistrationMethod userRegistrationMethod = new UserRegistrationMethod();
-        boolean isValid = userRegistrationMethod.verificationLastName("barde");
+        boolean isValid = register.verifyLastName.ValidationOfUser("barde");
         Assert.assertFalse(isValid);
     } 
 	//-----------------------Email---------------------------//
@@ -43,7 +43,7 @@ public class UserRegistrationTest {
 		@Test
 		public void givenEmail_WhenProper_ShouldReturnTrue() throws EmailException{
 	        UserRegistrationMethod userRegistrationMethod = new UserRegistrationMethod();
-	        boolean isValid = userRegistrationMethod.verificationEmail("abc.100@yahoo.com");
+	        boolean isValid = register.verifyMail.ValidationOfUser("abc.100@yahoo.com");
 	        Assert.assertTrue(isValid);
 	    } 
 		
@@ -51,7 +51,7 @@ public class UserRegistrationTest {
 		public void givenEmail_WhenProper_ShouldReturnFalse() throws EmailException
 	    {
 	        UserRegistrationMethod userRegistrationMethod = new UserRegistrationMethod();
-	        boolean isValid = userRegistrationMethod.verificationEmail("abc@.com.com");
+	        boolean isValid = register.verifyMail.ValidationOfUser("abc@.com.com");
 	        Assert.assertFalse(isValid);
 	    } 
 		
@@ -79,7 +79,7 @@ public class UserRegistrationTest {
 			public void givenPassword_WhenProper_ShouldReturnTrue() throws PasswordException
 		    {
 		        UserRegistrationMethod userRegistrationMethod = new UserRegistrationMethod();
-		        boolean isValid = userRegistrationMethod.passwordVerification("abC123@xyz");
+		        boolean isValid = register.verifyPassword.ValidationOfUser("abC123@xyz");
 		        Assert.assertTrue(isValid);
 		    } 
 			
@@ -87,7 +87,7 @@ public class UserRegistrationTest {
 			public void givenPassword_WhenProper_ShouldReturnFalse() throws PasswordException
 		    {
 		        UserRegistrationMethod userRegistrationMethod = new UserRegistrationMethod();
-		        boolean isValid = userRegistrationMethod.passwordVerification("abCD2eghij");
+		        boolean isValid = register.verifyPassword.ValidationOfUser("abCD2eghij");
 		        Assert.assertFalse(isValid);
 		    } 
 			

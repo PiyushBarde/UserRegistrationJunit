@@ -10,6 +10,7 @@ import org.junit.Assert;
 
 @RunWith(Parameterized.class)
 public class UserRegistrationJunitTestForEmail {
+	UserRegistrationMethod register = new UserRegistrationMethod();
 	private String email2Test;
 	private boolean expectedResult;
 	
@@ -44,7 +45,7 @@ public class UserRegistrationJunitTestForEmail {
 		@Test
 		public void givenEmail_WhenValid_ShowReturnTrue() throws EmailException {
 			UserRegistrationMethod userRegistrationMethod = new UserRegistrationMethod();
-			boolean result = userRegistrationMethod.verificationEmail(this.email2Test);
+			boolean result = register.verifyMail.ValidationOfUser(this.email2Test);
 			Assert.assertEquals(this.expectedResult, result);
 		}
 	}

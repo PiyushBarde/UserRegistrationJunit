@@ -31,11 +31,5 @@ public class UserRegistrationMain {
     
     UserRegistrationMethod userRegistrationMethod = new UserRegistrationMethod();
     
-    userRegistrationMethod.finalArgument(userRegistrationMethod.verificationFirstName(userRegistrationDetails.getFirstName()),
-            userRegistrationMethod.verificationLastName(userRegistrationDetails.getLastName()),
-            userRegistrationMethod.verificationEmail(userRegistrationDetails.getEmail()),
-            userRegistrationMethod.verificationEmail(userRegistrationDetails.getPassword()),
-            userRegistrationDetails);
-    
 	}
 }

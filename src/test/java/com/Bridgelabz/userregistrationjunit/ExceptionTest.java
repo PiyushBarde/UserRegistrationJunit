@@ -5,79 +5,79 @@ import org.junit.Test;
 
 public class ExceptionTest {
 	@Test
-	public void givenFirstName_IsNull_ShouldThrowNullException() throws FirstNameException {
+	public void givenFirstName_IsNull_ShouldThrowNullException() throws UserRegistrationCommonException {
 		UserRegistrationMethod register = new UserRegistrationMethod();
 		try {
-			register.verificationFirstName(null);
-		} catch (FirstNameException e) {
-			Assert.assertEquals(FirstNameException.ExceptionType.ENTERED_NULL, e.type);
+			register.verifyFirstName.ValidationOfUser(null);
+		} catch (UserRegistrationCommonException e) {
+			Assert.assertEquals(UserRegistrationCommonException.ExceptionType.ENTERED_NULL, e.type);
 		}
 	}
 	@Test
-	public void givenFirstName_WhenEmpty_ShouldThrowEmptyException() throws FirstNameException{
+	public void givenFirstName_WhenEmpty_ShouldThrowEmptyException() throws UserRegistrationCommonException{
 
 		UserRegistrationMethod register = new UserRegistrationMethod();
 		try {
-			register.verificationFirstName("");
-		} catch (FirstNameException e) {
-			Assert.assertEquals(FirstNameException.ExceptionType.ENTERED_EMPTY, e.type);
+			register.verifyFirstName.ValidationOfUser("");
+		} catch (UserRegistrationCommonException e) {
+			Assert.assertEquals(UserRegistrationCommonException.ExceptionType.ENTERED_EMPTY, e.type);
 		}
 	}
 	@Test
-	public void givenLastName_IsNull_ShouldThrowNullException() throws LastNameException {
+	public void givenLastName_IsNull_ShouldThrowNullException() throws UserRegistrationCommonException {
 		UserRegistrationMethod register = new UserRegistrationMethod();
 		try {
-			register.verificationLastName(null);
-		} catch (LastNameException e) {
-			Assert.assertEquals(LastNameException.ExceptionType1.ENTERED_NULL, e.type);
+			register.verifyLastName.ValidationOfUser(null);
+		} catch (UserRegistrationCommonException e) {
+			Assert.assertEquals(UserRegistrationCommonException.ExceptionType.ENTERED_NULL, e.type);
 		}
 	}
 	@Test
-	public void givenLastName_WhenEmpty_ShouldThrowEmptyException1() throws LastNameException{
+	public void givenLastName_WhenEmpty_ShouldThrowEmptyException1() throws UserRegistrationCommonException{
 
 		UserRegistrationMethod register = new UserRegistrationMethod();
 		try {
-			register.verificationLastName("");
-		} catch (LastNameException e) {
-			Assert.assertEquals(LastNameException.ExceptionType1.ENTERED_EMPTY, e.type);
+			register.verifyLastName.ValidationOfUser("");
+		} catch (UserRegistrationCommonException e) {
+			Assert.assertEquals(UserRegistrationCommonException.ExceptionType.ENTERED_EMPTY, e.type);
 		}
 	}
 	@Test
-	public void givenEmail_IsNull_ShouldThrowNullException() throws EmailException {
+	public void givenEmail_IsNull_ShouldThrowNullException() throws UserRegistrationCommonException {
 		UserRegistrationMethod register = new UserRegistrationMethod();
 		try {
-			register.verificationEmail(null);
-		} catch (EmailException e) {
-			Assert.assertEquals(EmailException.ExceptionType2.ENTERED_NULL, e.type);
+			register.verifyMail.ValidationOfUser(null);
+		} catch (UserRegistrationCommonException e) {
+			Assert.assertEquals(UserRegistrationCommonException.ExceptionType.ENTERED_NULL, e.type);
 		}
 	}
 	@Test
-	public void givenEmail_WhenEmpty_ShouldThrowEmptyException() throws EmailException{
+	public void givenEmail_WhenEmpty_ShouldThrowEmptyException() throws UserRegistrationCommonException{
 
 		UserRegistrationMethod register = new UserRegistrationMethod();
 		try {
-			register.verificationEmail("");
-		} catch (EmailException e) {
-			Assert.assertEquals(EmailException.ExceptionType2.ENTERED_EMPTY, e.type);
+			register.verifyMail.ValidationOfUser("");
+		} catch (UserRegistrationCommonException e) {
+			Assert.assertEquals(UserRegistrationCommonException.ExceptionType.ENTERED_EMPTY, e.type);
 		}
 	}
 	@Test
-	public void givenPassword_IsNull_ShouldThrowNullException() throws PasswordException {
+	public void givenPassword_IsNull_ShouldThrowNullException() throws UserRegistrationCommonException {
 		UserRegistrationMethod register = new UserRegistrationMethod();
 		try {
-			register.passwordVerification(null);
-		} catch (PasswordException e) {
-			Assert.assertEquals(PasswordException.ExceptionType4.ENTERED_NULL, e.type);
+			register.verifyPassword.ValidationOfUser(null);
+		} catch (UserRegistrationCommonException e) {
+			Assert.assertEquals(UserRegistrationCommonException.ExceptionType.ENTERED_NULL, e.type);
 		}
 	}
 	@Test
-	public void givenPassword_WhenEmpty_ShouldThrowEmptyException() throws PasswordException{
+	public void givenPassword_WhenEmpty_ShouldThrowEmptyException() throws UserRegistrationCommonException{
 
 		UserRegistrationMethod register = new UserRegistrationMethod();
 		try {
-			register.passwordVerification("");
-		} catch (PasswordException e) {
-			Assert.assertEquals(PasswordException.ExceptionType4.ENTERED_EMPTY, e.type);
+			register.verifyPassword.ValidationOfUser("");
+		} catch (UserRegistrationCommonException e) {
+			Assert.assertEquals(UserRegistrationCommonException.ExceptionType.ENTERED_EMPTY, e.type);
 		}
 	}
 
